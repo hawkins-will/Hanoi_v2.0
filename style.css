@@ -1,0 +1,304 @@
+body {
+  background-color: grey;
+  background: url("https://s-media-cache-ak0.pinimg.com/originals/2b/08/32/2b083225b9fac1e7db5b77d0210274d0.jpg");
+  background-size: 100% 100%;
+  min-width: 1169px;
+  margin: 0px;
+}
+
+.titleHeader {
+  background: url("https://s-media-cache-ak0.pinimg.com/originals/fa/01/a1/fa01a1fa95d9a56aea4f7985a74c6c0f.gif");
+  background-size: 100% 70%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  width: 550px;
+  padding-bottom: 5px;
+}
+
+.subHeader {
+  font-size: 20px;
+  background: url("https://s-media-cache-ak0.pinimg.com/originals/fa/01/a1/fa01a1fa95d9a56aea4f7985a74c6c0f.gif");
+  background-size: 100% 100%;
+  width: 1000px;
+  height: 470px;
+  padding: 25px 0 20px 150px;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.legend {
+  font-size: 20px;
+  background: url("https://s-media-cache-ak0.pinimg.com/originals/fa/01/a1/fa01a1fa95d9a56aea4f7985a74c6c0f.gif");
+  background-size: 100% 100%;
+  padding: 25px 0px 25px 150px;
+  width: 1000px;
+  height: 315px;
+  margin: 50px 0 50px 0;
+}
+
+.legendText {
+  width: 850px;
+}
+
+header, .scoring, button, section, #tileNumber {
+  font-family: 'Aladin', cursive;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  text-align: center;
+  font-size: 75px;
+  margin-bottom: 0px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+.recordScoring, .currentScoring {
+  font-size: 20px;
+}
+
+.clickScore {
+  font-size: 24px;
+}
+
+h3 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.boardColumns {
+  display: flex;
+  width: 1149px;
+  margin: 0 auto 0 auto;
+  background-color: grey;
+  background: url("https://s-media-cache-ak0.pinimg.com/originals/1e/c2/22/1ec22250d57b6a5ab54368c07b0780fd.jpg");
+  background-size: 100% 140%;
+  background-position: center;
+}
+
+.boardColumnsOuter {
+  padding: 0 10px 0 10px;
+}
+
+.columnOne, .columnTwo, .columnThree {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;;
+  background-color: transparent;
+  min-width: 375px;
+  height: 400px;
+  flex-grow: 1;
+  border: 6px solid black;
+  border-left: 3px solid black;
+  border-right: 3px solid black;
+}
+
+.columnOne {
+  border-left: 6px solid black;
+}
+
+.columnThree {
+  border-right: 6px solid black;
+}
+
+.columnOne:hover, .columnTwo:hover, .columnThree:hover {
+  background-color: rgba(34, 139, 34, .3);
+}
+
+.tiles {
+  height: 50px;
+  color: rgba(0,0,0,1);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  background: url("http://www.texturex.com/albums/Wood-Textures/red%20wood%20texture%20grain%20natural%20wooden%20paneling%20surface%20photo%20wallpaper.jpg");
+  background-size: 100% 100%;
+  background-position: center;
+  border-radius: 10px;
+  width: 50px;
+  visibility: hidden;
+}
+
+#one {
+  width: 50px;
+}
+
+#two {
+  width: 100px;
+}
+
+#three {
+  width: 150px;
+}
+
+#four {
+  width: 200px;
+}
+
+#five {
+  width: 250px;
+}
+
+#six {
+  width: 300px;
+}
+
+#seven {
+  width: 350px;
+}
+
+.active {
+  border: 2px dotted white;
+  box-sizing: border-box;
+}
+
+.scoring {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin: 10px auto 20px auto;
+  width: 1149px;
+}
+
+.winScoring, .recordScoring, .currentScoring {
+  width: 200px;
+}
+
+.recordScoring {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 50px;
+}
+
+.currentScoring {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-right: 50px;
+}
+
+.winScoring {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  font-size: 30px;
+  width: 400px;
+  height: 150px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.currentScoring {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  margin: 0 10px 0 0;
+}
+
+.reset {
+  margin-top: 0px;
+  height: 30px;
+  font-size: 18px;
+  width: 90px;
+}
+
+header {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+footer {
+  background: rgba(125,125, 125, 0.5);
+  height: 60px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}
+
+.footerOne, .footerTwo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+}
+
+.GALogo {
+  height: 24px;
+  width: 24px;
+  padding-left: 4px;
+}
+
+.recordHeading {
+  margin-bottom: 5px;
+}
+
+.hiddenColumn {
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  margin-top: -50px;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.numberSelector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 850px;
+}
+
+#tileButton {
+  height: 35px;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+#tileNumber {
+  width: 70px;
+  height: 35px;
+  font-size: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: beige;
+}
+
+#tileButton:hover, button:hover {
+  background: rgb(200,200,200);
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.disabled {
+  background-color: rgb(200,200,200);
+}

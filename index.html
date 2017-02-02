@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Tower of Hanoi v2.0</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Aladin" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="titleHeader">
+        <h1>Tower of Hanoi</h1>
+      </div>
+      <div class="subHeader">
+        <h2>Instructions</h2>
+        <p>In 1883, French mathematician &Eacute;douard Lucas invented a puzzle based on a legend about Indian Monks.</p>
+        <p>To complete the puzzle, move the entire tower from one column to another, one piece at a time, while obeying the following rules:</p>
+        <ol>
+          <li>You may only pick up the top tile of a stack</li>
+          <li>You may only hold one tile at a time</li>
+          <li>You may only place a tile on another tile larger than itself</li>
+        </ol>
+        <p>Click anywhere within one Column to select the top tile, and then click in another Column to place it.</p>
+        <p>On this website, you can play with between Three and Seven tiles. How many tiles would you like to play with?</p>
+        <div class="numberSelector">
+          <input type="number" onchange="handleChange(this);" id="tileNumber"/>
+          <button type="button" name="button" id="tileButton">Play</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="scoring">
+      <div class="recordScoring">
+        <h3 class="personalRecords">Personal Records:</h3>
+        <h3 class="timeRecord">None</h3>
+        <h3 class="turnRecord">(Yet!)</h3>
+      </div>
+      <div class="winScoring">
+        <h3 class="recordHeading">Congratulations! You win!</h3>
+        <h3 class="result">Result To Be Shown Here</h3>
+      </div>
+      <div class="currentScoring">
+        <h3 class="timeElapsed">0:00</h3>
+        <h3 class="clickScore">0 Turns</h3>
+        <button type="button" class="reset" name="button">Reset</button>
+      </div>
+    </div>
+
+    <div class="boardColumnsOuter">
+      <div class="boardColumns">
+        <div class="columnOne"></div>
+        <div class="columnTwo"></div>
+        <div class="columnThree"></div>
+      </div>
+    </div>
+
+    <section>
+      <div class="legend">
+        <div class="legendText">
+          <h2>The Legend of Hanoi</h2>
+          <p>According to legend (which may or may not have been fabricated by &Eacute;douard Lucas himslef), at the Kashi Vishwanath Temple in India, there is with three poles, one of which is holds a tower of 64 golden discs. Acting out an ancient prophecy, the priests having been moving these discs in accordance with the above stated rules. When the puzzle is finally completed, it will bring about the end of the world!</p>
+          <p>If the priests were to move one disc per second and make the smallest number of moves possible, it would take them 585 Billion years to finish. Fortunately, that's a long, long way off.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="hiddenColumn">
+      <div class="tiles" id="one">1</div>
+      <div class="tiles" id="two">2</div>
+      <div class="tiles" id="three">3</div>
+      <div class="tiles" id="four">4</div>
+      <div class="tiles" id="five">5</div>
+      <div class="tiles" id="six">6</div>
+      <div class="tiles" id="seven">7</div>
+    </div>
+
+    <footer>
+      <div class="footerOne">
+        <p>Created by Will Hawkins for a Class Assignment at </p>
+        <img src="https://s.evbuc.com/https_proxy?url=http%3A%2F%2Fculturelabx.com%2Fwp-content%2Fuploads%2F2014%2F10%2Fgeneral-assembly-logo.png&sig=ADR2i7_SVYyXSfxA0eqT_cGehyxS7RPckQ" alt="GA Logo" class="GALogo">
+      </div>
+      <div class="footerTwo">
+        <p>Please don't sue me. I'm very poor.</p>
+      </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
