@@ -16,9 +16,9 @@ var lowestPossible = [7, 15, 31, 63, 127];
 
 //Initalize Object that Stores Records
 var myObject = {
-  records: [[null, null, null, null], [null, null, null, null], [null, null, null, null], [null, null, null, null], [null, null, null, null]]
+  records: [[], [], [], [], []]
 };
-sessionStorage.setItem('stored', JSON.stringify(myObject));
+// sessionStorage.setItem('stored', JSON.stringify(myObject));
 
 //Function to return Stored Data (if it Exists), Incorporate that Data into Records, and Update Records Display
 function loadSaved() {
