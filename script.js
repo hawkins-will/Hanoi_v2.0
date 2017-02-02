@@ -16,18 +16,22 @@ var lowestPossible = [7, 15, 31, 63, 127];
 
 //Initalize Object that Stores Records
 var myObject = {
-  records: [[], [], [], [], []]
+  records: [[null, null, null, null], [null, null, null, null], [null, null, null, null], [null, null, null, null], [null, null, null, null]]
 };
-// sessionStorage.setItem('stored', JSON.stringify(myObject));
+var retrievedObject = sessionStorage.getItem('stored');
+var newObject = JSON.parse(retrievedObject);
+if (newObject != null) {
+  if (myObject.records[0][0] == null || myObject.records[1][0] == null || myObject.records[2][0] == null || myObject.records[3][0] == null || myObject.records[4][0] == null) {
+    myObject = newObject;
+  }
+}
 
 //Function to return Stored Data (if it Exists), Incorporate that Data into Records, and Update Records Display
 function loadSaved() {
   // console.log(+numTiles);
   console.log(numTiles);
-  var retrievedObject = sessionStorage.getItem('stored');
-  var myObject = JSON.parse(retrievedObject);
     //If Records exist for Number of Tiles, show them
-  if (myObject.records[+numTiles-3][0] != null && myObject.records[+numTiles-3][1] != null && myObject.records[+numTiles-3][2] != null && myObject.records[+numTiles-3][3] != null) {
+  if (myObject.records[+numTiles-3][0] != null || myObject.records[+numTiles-3][1] != null || myObject.records[+numTiles-3][2] != null || myObject.records[+numTiles-3][3] != null) {
       aSaved = +myObject.records[+numTiles-3][0], bSaved = +myObject.records[+numTiles-3][1], cSaved = +myObject.records[+numTiles-3][2], turnSaved = +myObject.records[+numTiles-3][3];
       $(".timeRecord").text(+aSaved + ":" + +bSaved + +cSaved);
       $(".turnRecord").text(turnSaved);
@@ -113,11 +117,11 @@ function checkEfficiency() {
       $(".winScoring").css("visibility", "visible");
       $(".turnRecord").text((i/2 - 1));
       myObject.records[+numTiles-3][3] = (i/2 - 1);
-    }
     //If you DIDN'T beat your record
-  } else if ((i/2 - 1) >= +record) {
-    $(".result").text("You didn't beat your record, though. Try again!");
-    $(".winScoring").css("visibility", "visible");
+    } else if ((i/2 - 1) >= +record) {
+      $(".result").text("You didn't beat your record, though. Try again!");
+      $(".winScoring").css("visibility", "visible");
+    }
   } if (a < aSaved){
     //If you took fewer minutes to solve the puzzle
     aSaved = a, bSaved = b, cSaved = c;
