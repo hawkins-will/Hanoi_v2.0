@@ -198,19 +198,21 @@ var numTiles = 0;
 function placeTiles() {
   $("#tileButton").on("click", function(){
     numTiles = $("#tileNumber").val();
-    $("#tileNumber").val("");
-    for (var x = 0; x < numTiles; x++) {
-        $(tileIds[x]).appendTo(".columnTwo");
-        $(tileIds[x]).addClass("visible");
-      }
+    if (numTiles != 0) {
+      $("#tileNumber").val("");
+      for (var x = 0; x < numTiles; x++) {
+          $(tileIds[x]).appendTo(".columnTwo");
+          $(tileIds[x]).addClass("visible");
+        }
       //Scroll the window to the Game
       $("html, body").stop().animate({scrollTop:675}, 1000);
       //Deactivates Tile-Placing Button
       $("#tileButton").addClass("disabled");
       $("#tileButton").off();
-    //Run Stored Data Function and Activate Column Listener
-    loadSaved();
-    columnsListener();
+      //Run Stored Data Function and Activate Column Listener
+      loadSaved();
+      columnsListener();
+    }
   })
 }
 
