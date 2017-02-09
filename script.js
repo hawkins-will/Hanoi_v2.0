@@ -15,6 +15,9 @@ var tileIds = ["#one", "#two", "#three", "#four", "#five", "#six", "#seven"];
 var lowestPossible = [7, 15, 31, 63, 127];
 
 //Initalize Object that Stores Records
+// ND: This is really cool! The next step would be to implement user authentication, so you can tie a specific playTimer
+// to their score. We'll be learning more about that as we get into server-side programming, but it is possible to implement
+// on the frontend as well. http://stackoverflow.com/questions/34860814/basic-authentication-using-javascript
 var myObject = {
   records: [[null, null, null, null], [null, null, null, null], [null, null, null, null], [null, null, null, null], [null, null, null, null]]
 };
@@ -26,6 +29,7 @@ if (newObject != null) {
   }
 }
 
+// ND: Nice Pseudocode here. It's really easy to figure out what your code is doing.
 //Function to return Stored Data (if it Exists), Incorporate that Data into Records, and Update Records Display
 function loadSaved() {
   // console.log(+numTiles);
@@ -56,9 +60,12 @@ function myTimer() {
   $(".timeElapsed").text(a + ":" + b + c);
 }
 
+// ND: Here, I'd be more specific in the pseudocode about what your code is doing. We know what listeners are, but
+// think about a dev you might be working with who isn't as familiar with JS. Lots of CS folks don't know Javascript.
 //Column Listeners
 function columnsListener() {
   //On Click:
+  // ND: Would we have been able to set a class here on all three columns so we'd only have one selector?
 $(".columnOne, .columnTwo, .columnThree").on("click", function () {
   //Set Timer on Initiation of First Turn
 
@@ -100,6 +107,7 @@ $(".columnOne, .columnTwo, .columnThree").on("click", function () {
   })
 }
 
+// ND: Code is very well-organized and indented.
 //Check If You Completed in Fewest Possible Turns
 function checkEfficiency() {
   var record = $(".turnRecord").text();
@@ -125,6 +133,7 @@ function checkEfficiency() {
   } if (a < aSaved){
     //If you took fewer minutes to solve the puzzle
     aSaved = a, bSaved = b, cSaved = c;
+    // ND: Seeing some redundancy here. Could we write some kind of loop here?
     $(".timeRecord").text(a + ":" + b + c);
     myObject.records[+numTiles-3][0] = +a;
     myObject.records[+numTiles-3][1] = +b;
@@ -157,6 +166,7 @@ function checkWin() {
   }
 }
 
+// ND: So the personal records text disappears when you reset, was there a reason for that?
 //Reset the Board
 $(".reset").on("click", function() {
   if ($(".columnOne").children().first().length != 0 || $(".columnTwo").children().first().length != 0 || $(".columnThree").children().first().length != 0) {
